@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center">TO-DO LIST</h1>
+                <div class="input-group mb-3">
+                    <input type="text" id="todoInput" class="form-control" placeholder="Enter Your task...">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="addButton">Add</button>
+                    </div>
+                </div>
+                <div class="table-responsive todo-table-wrapper">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Task</th>
+                                <th>Status</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="todoList">
+                        </tbody>
+                    </table>
+                </div>
+                <button class="btn btn-danger btn-block" id="deleteButton">Delete All</button>
+            </div>
+        </div>
+        <footer class="text-center mt-4" >
+            Made with <span style="color: red;">&hearts;</span> By Sampujya
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
