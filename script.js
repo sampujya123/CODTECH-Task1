@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
 function addTask() {
     const newTask = todoInput.value.trim();
     if (newTask !== "") {
-        todo.push({
+        // Add the new task at the top
+        todo.unshift({
             text: newTask,
             disabled: false,
             status: "Pending"
