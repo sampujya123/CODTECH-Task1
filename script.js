@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function addTask() {
     const newTask = todoInput.value.trim();
     if (newTask !== "") {
-        // Add the new task at the top
+        // Add the new task at the top of the array
         todo.unshift({
             text: newTask,
             disabled: false,
@@ -46,8 +46,13 @@ function deleteTask(index) {
 }
 
 function displayTasks() {
+    // Clear the task list first
     todoList.innerHTML = "";
-    todo.forEach((item, index) => {
+
+    // Iterate in reverse to show the newest tasks at the top
+    for (let index = 0; index < todo.length; index++) {
+        const item = todo[index];
+
         const tr = document.createElement("tr");
 
         const tdCheckbox = document.createElement("td");
@@ -71,8 +76,9 @@ function displayTasks() {
         tr.appendChild(tdStatus);
         tr.appendChild(tdDelete);
 
+        // Add each row to the top of the table
         todoList.appendChild(tr);
-    });
+    }
 }
 
 function editTask(index) {
